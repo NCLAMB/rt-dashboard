@@ -1,0 +1,292 @@
+
+.swipe-list {
+        display: block;
+        list-style-position: outside;
+        list-style-type: none;
+        margin: 0;
+        padding: 0.08rem 0 0.5rem;
+        overflow: hidden;
+        font-size: 0.9rem;
+        li {
+            position: relative;
+            overflow: hidden;
+            height:50px;
+            padding: 0;
+            border-bottom: #e8e8e8 1px solid;
+            a {
+                height: 50px;
+                padding-left: 30px;
+                padding-top: 5px;
+                color: #fff;
+                display: block;
+                background: #aaaaaa url("../assets/img/column-shadow-l.png") repeat-y right;
+                .label {
+                    font-size: 0.8em;
+                    text-align: center;
+                    padding: 0.4rem 0.5rem 0.4rem;
+                    min-width:44px;
+                }
+                .swipe {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    height: 50px;
+                    width: 20px;
+                    padding-top: 0;
+                    text-align: center;
+                    background-color: #aaaaaa;
+                    background-image: url("../assets/img/patterns/pixel-grad.png");
+                  i {
+                        color: #fff;
+                        font-size: 1.8em;
+                        line-height: 50px;
+                    }
+                }
+                .desc {
+                    padding:0 105px 0 0;
+                    text-transform: capitalize;
+                    display: block;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    line-height: 40px
+                }
+
+                .share-price {
+                    position: absolute;
+                    right:8px;
+                    top:12px;
+                }
+            }
+            > button {
+                background: none;
+                display: none;
+                transform: translateX(-100%);
+                -webkit-transform: translateX(-100%);
+                -ms-transform: translateX(-100%);
+                transition: 0s;
+                padding: 0;
+                margin: 0;
+                height: 50px;
+                width: 30px;
+                float: left;
+                i {
+                    color: #515151;
+                    font-size: 1.4em;
+                    line-height: 46px;
+                }
+            }
+            &.swiped {
+                a {
+                    background: #f58e09 url("../assets/img/column-shadow-l.png") repeat-y right;
+                    transform: translateX(40px);
+                    -webkit-transform: translateX(40px);
+                    -ms-transform: translateX(40px);
+                    transition: 0.25s;
+                    .label {
+                        background-color: #dc8008;
+                    }
+                    .swipe {
+                        border-right: 0;
+                        background-color: #dc8008;
+                    }
+                    .desc {
+                        width: auto;
+                    }
+                }
+                > button {
+                    background: none;
+                    display: inline;
+                    transform: translateX(0%);
+                    -webkit-transform: translateX(0%);
+                    -ms-transform: translateX(0%);
+                    transition: 0.25s;
+                }
+            }
+            @media #{$medium-up} {
+                &:hover {
+                    a {
+                        background: #f58e09 url("../assets/img/column-shadow-l.png") repeat-y right;
+                        transform: translateX(40px);
+                        -webkit-transform: translateX(40px);
+                        -ms-transform: translateX(40px);
+                        transition: 0.25s;
+                        .right {
+                            padding-top:25px;
+                            margin-right:50px;
+                        }
+                        .label {
+
+                            background-color: #dc8008;
+                        }
+                        .swipe {
+                            border-right: 0;
+                            background-color: $primary-color;
+                            background-image: url("../assets/img/patterns/pixel-grad.png");
+                        }
+                        .desc {
+                            width: auto;
+                        }
+                    }
+                    > button {
+                        background: none;
+                        display: inline;
+                        transform: translateX(0%);
+                        -webkit-transform: translateX(0%);
+                        -ms-transform: translateX(0%);
+                        transition: 0.25s;
+                    }
+                }
+            }
+        }
+    }
+
+#numero3 {
+
+&.swipe-list {
+        display: block;
+        list-style-position: outside;
+        list-style-type: none;
+        margin: 0;
+        padding: 0.08rem 0 0.5rem;
+        overflow: hidden;
+        font-size: 0.9rem;
+        li {
+            position: relative;
+            overflow: hidden;
+            height:50px;
+            padding: 0;
+            border-bottom: #e8e8e8 1px solid;
+            a {
+                height: 50px;
+                padding-left: 30px;
+                padding-top: 5px;
+                color: #fff;
+                display: block;
+                background: #aaaaaa url("../assets/img/column-shadow-l.png") repeat-y right;
+                .swipe {
+                  i {
+                        color: #fff;
+                        font-size: 1.8em;
+                        line-height: 50px;
+                    }
+                }
+                p {
+                    margin:0;
+                    &.desc {
+                        padding:0 105px 0 0;
+                        text-transform: capitalize;
+                        display: block;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        line-height: 20px;
+                    }
+                    &.ticker {
+                        padding:0 25px 0 0;
+                        display: block;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        line-height: 15px;
+                    }
+                }
+                .share-price {
+                    position: absolute;
+                    right:7px;
+                    top:8px;
+                }  
+            }
+            > button {
+                background: none;
+                display: none;
+                transform: translateX(-100%);
+                -webkit-transform: translateX(-100%);
+                -ms-transform: translateX(-100%);
+                transition: 0s;
+                padding: 0;
+                margin: 0;
+                height: 50px;
+                width: 120px;
+                float: left;
+                i {
+                    color: #515151;
+                    font-size: 1.4em;
+                    line-height: 46px;
+                    span {
+                        font-size: 0.7em;
+                        padding-left:8px;
+                        margin-top:-8px;
+                    }
+                }
+            }
+            &.swiped {
+                a {
+                    background: #f58e09 url("../assets/img/column-shadow-l.png") repeat-y right;
+                    transform: translateX(110px);
+                    -webkit-transform: translateX(110px);
+                    -ms-transform: translateX(110px);
+                    transition: 0.25s;
+                    .label {
+                        background-color: #dc8008;
+                    }
+                    .swipe {
+                        border-right: 0;
+                        background-color: #dc8008;
+                    }
+                    .desc {
+                        width: auto;
+                    }
+                }
+                > button {
+                    background: none;
+                    display: inline;
+                    transform: translateX(0%);
+                    -webkit-transform: translateX(0%);
+                    -ms-transform: translateX(0%);
+                    transition: 0.25s;
+                }
+            }
+            @media #{$medium} {
+                &:hover {
+                    a {
+                        background: #f58e09 url("../assets/img/column-shadow-l.png") repeat-y right;
+                        transform: translateX(110px);
+                        -webkit-transform: translateX(110px);
+                        -ms-transform: translateX(110px);
+                        transition: 0.25s;
+                        .right {
+                            padding-top:25px;
+                            margin-right:50px;
+                        }
+                        .label {
+
+                            background-color: #dc8008;
+                        }
+                        .swipe {
+                            border-right: 0;
+                            background-color: $primary-color;
+                            background-image: url("../assets/img/patterns/pixel-grad.png");
+                        }
+                        .desc, .ticker {
+                            width: auto;
+                        }
+                    }
+                    > button {
+                        background: none;
+                        display: inline;
+                        transform: translateX(0%);
+                        -webkit-transform: translateX(0%);
+                        -ms-transform: translateX(0%);
+                        transition: 0.25s;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
